@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TabbedSayfaOrnek.Sayfalar.Hakkimizda"             
+             IconImageSource="about.png">
+    <Grid Padding="30">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Text="Ödeme" VerticalOptions="Center" />
+        <Entry Grid.Row="0" Grid.Column="1" x:Name="odemeEntry" Placeholder="Enter Amount" Keyboard="Numeric" />
+
+        <Label Grid.Row="1" Grid.Column="0" Text="Bahşis" />
+        <Label Grid.Row="1" Grid.Column="1" x:Name="bahsisLabel" Text="0.00" />
+
+        <Label Grid.Row="2" Grid.Column="0" Text="Toplam Tutar" />
+        <Label Grid.Row="2" Grid.Column="1" x:Name="toplamTutarLabel" Text="0.00" />
+
+        <Label Grid.Row="3" Grid.Column="0" VerticalOptions="End" HorizontalOptions="Start" Text="Bahşis Yüzdesi" />
+        <Label Grid.Row="3" Grid.Column="1" VerticalOptions="End" HorizontalOptions="End" x:Name="bahsisYuzdeLabel" Text="15%" />
+        <Slider Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" x:Name="bahsisYuzdeAyarSlider" Minimum="0" Maximum="100" Value="15" />
+
+        <Button Grid.Row="5" Grid.Column="0" Text="15%" />
+        <Button Grid.Row="5" Grid.Column="1" Text="20%" />
+
+        <Button Grid.Row="6" Grid.Column="0" x:Name="asagiTamamButton" Text="Aşağı Tamamla" />
+        <Button Grid.Row="6" Grid.Column="1" x:Name="yukariTamamlaButton"  Text="Yukarı Tamamla" />
+
+    </Grid>
+</ContentPage>
